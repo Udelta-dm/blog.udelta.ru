@@ -60,3 +60,11 @@ typings/
 # VS Code 
 .vscode/
 .vscode-upload.json
+
+*.log
+
+# Hexo
+
+db.json
+public_html/
+.deploy*/
