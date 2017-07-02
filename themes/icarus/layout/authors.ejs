@@ -1,0 +1,18 @@
+<%
+// составление списка авторов
+var blogAuthors = site.data.authors;
+%>
+<section class="layout-wrap">
+    <div class="layout-title">
+        <h1 class="blog-title"><%= page.title %></h1>
+    </div>
+    <div class="layout-wrap-inner authors-list">
+        <ul>
+            <% for (var i in blogAuthors) { %>
+                <% if (i != 'default' && i != blogAuthors['default']) { %>
+                    <%- partial('common/author', { profile: blogAuthors[i], alias: i, index: true }) %>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+</section>

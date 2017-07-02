@@ -1,0 +1,12 @@
+<%
+function filterByAuthor(obj) {
+  if (obj.author == page.person) {
+    return true;
+  } else {
+    return false;
+  }
+}
+var postsAuthor = site.posts.filter(filterByAuthor);
+%>
+
+<%- partial('common/author', { postsAuthor: postsAuthor, profile: site.data.authors[page.person], index: false }) %>

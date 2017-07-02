@@ -1,0 +1,85 @@
+# Menus
+menu:
+  Блог: .
+  Архив: archives
+  Категории: categories
+  Теги: tags
+  Авторы: authors
+
+# Customize
+customize:
+    logo:
+        enabled: true
+        width: 100
+        height: 40
+        url: https://s-blog.udelta.ru/images/logo-udelta.svg
+    profile:
+        enabled: true # Whether to show profile bar
+        avatar: 
+        gravatar: info@udelta.ru # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+        author: Udelta
+        author_title: digital marketing
+        location: Москва, Росссия
+        follow: 
+    highlight: monokai
+    sidebar: right # sidebar position, options: left, right or leave it empty
+    thumbnail: true # enable posts thumbnail, options: true, false
+    favicon: favicon.ico # path to favicon
+    social_links:
+        rss: /rss.xml
+    social_link_tooltip: true # enable the social link tooltip, options: true, false
+
+# Widgets
+widgets:
+    - recent_posts
+    - category
+    - archive
+    - tag
+    - tagcloud
+    - links
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+
+# Comment
+comment:
+    disqus: udelta # enter disqus shortname here
+    duoshuo: # enter duoshuo shortname here
+    youyan: # enter youyan uid here
+    facebook: # enter true to enable
+    isso: # enter the domain name of your own comment isso server eg. comments.example.com
+    changyan: # please fill in `appid` and `conf` to enable
+        appid:
+        conf:
+    gitment:
+        owner: #your github ID
+        repo: #the repo to store comments
+        #Register an OAuth application, and you will get a client ID and a client secret.
+        client_id: #your client ID
+        client_secret: #your client secret
+
+# Share
+share: default # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    lightgallery: true # options: true, false
+    justifiedgallery: true # options: true, false
+    google_analytics: UA-101931570-1 # enter the tracking ID for your Google Analytics
+    google_site_verification: PTkRqeGkF0jdbkUygOwO5wS-tb6FXaCm573B5_15MYA # enter Google site verification code
+    baidu_analytics: # enter Baidu Analytics hash key
+    mathjax: false # options: true, false
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        Русская документация Odoo: https://www.open-odoo.ru/docs
+

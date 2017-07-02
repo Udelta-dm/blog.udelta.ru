@@ -1,0 +1,38 @@
+default: udelta
+udelta:
+  avatar: 
+  gravatar: info@udelta.ru
+  author: Udelta
+  author_title: digital marketing
+  location: Москва, Россия
+  follow: https://github.com/ppoffice/
+  social_links:
+    globe: https://www.udelta.ru
+    rss: /rss.xml
+
+celern:
+  avatar: 
+  gravatar: celern84@gmail.com
+  author: Роман Александров
+  author_title: Frontend-разработчик
+  location: Москва, Россия
+  follow: https://github.com/ppoffice/
+  social_links:
+    github: http://github.com/ppoffice/hexo-theme-icarus
+    twitter: https://twitter.com/CeleRn84
+    facebook: https://www.facebook.com/celern
+    envelope: mailto:r.alexandrov@udelta.ru
+    rss: /rss.xml
+
+yartsev:
+  avatar: 
+  gravatar: yarick1983@gmail.com
+  author: Александр Ярцев
+  author_title: Backend-разработчик
+  location: Новополоцк, Беларусь
+  follow: https://github.com/ppoffice/
+  social_links:
+    bitbucket: https://bitbucket.org/yartsevco/
+    globe: https://www.yartsev.by
+    envelope: mailto:a.yartsev@udelta.ru
+    rss: /rss.xml

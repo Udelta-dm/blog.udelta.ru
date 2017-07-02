@@ -1,0 +1,25 @@
+<div class="author">
+    <% if (!index) { %>
+        <h1 class="author__title"><%= profile.author %> <small class="author__title-small">Автор блога</small></h1>
+    <% } %>
+    <% if (index) { %>
+        <a href="<%= config.url %><%= config.authors_link %><%= alias %>/">
+            <img class="author__avatar" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" />
+        </a>
+    <% } else { %>
+        <img class="author__avatar" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 200) : url_for(profile.avatar)) %>" />
+    <% } %>
+        <% if (index) { %>
+            <h2 class="author__name"><%= profile.author %></h2>
+        <% } %>
+        
+        <h3 class="author__position"><%= profile.author_title %></h3>
+        <p class="author__location"><i class="fa fa-map-marker"></i><%= profile.location %></p>
+        <!--
+        <a class="author__follow" target="_blank" href="<%= profile.follow %>"><%= __('profile.follow') %></a>
+        -->
+</div>
+
+<% if (!index) { %>
+    <%- partial('common/timeline', { type: 'author' }) %>
+<% } %>

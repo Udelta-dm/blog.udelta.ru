@@ -1,0 +1,150 @@
+<%
+// выбор автора статьи или установка автора по умолчанию (Udelta)
+var profile = site.data.authors[site.data.authors.default];
+var defaultProfile = true;
+if (page.author in site.data.authors) {
+    var profile = site.data.authors[page.author];
+    var thisAuthor = page.author;
+    defaultProfile = false;
+}
+
+// назначение адресов ссылок профиля
+
+
+var linkImg = config.url + '/' + config.archive_dir + '/';
+var linkPost = config.url + '/' + config.archive_dir + '/';
+var linkTags = config.url + '/' + config.tag_dir + '/';
+
+if (!defaultProfile) {
+    linkImg = config.url + config.authors_link + thisAuthor + '/';
+    linkPost = config.url + config.authors_link + thisAuthor + '/';
+}
+ 
+// фильтр по автору
+function filterByAuthor(obj) {
+  if (obj.author == thisAuthor) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// выборка статей автора
+var postsAuthor = site.posts.filter(filterByAuthor);
+
+// подсчет количества постов автора 
+// выводит общего количество постов блога для автора по умолчанию
+
+
+
+// подсчет тегов автора
+var tagsAuthor = [];
+postsAuthor.each(function(post) {
+    post.tags.each(function(tag) {
+        tagsAuthor[tagsAuthor.length] = tag.name;
+    });
+});
+
+// функция оставляет массив с уникальными элементами
+function unique(arr) {
+  var obj = {};
+
+  for (var i = 0; i < arr.length; i++) {
+    var str = arr[i];
+    obj[str] = true; 
+  }
+
+  return Object.keys(obj); 
+}
+var postCount = 0;
+
+// наполняет переменные для вывода
+if (profile == site.data.authors[site.data.authors.default]) {
+    var postCount = site.posts.length;
+    var tagCount = site.tags.filter(function(tag) { return tag.length; }).length;
+} else {
+    var postCount = postsAuthor.length;
+    var tagCount = unique(tagsAuthor).length;
+}
+
+/**
+ * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
+ * param  $number Integer Число на основе которого нужно сформировать окончание
+ * param  $endingsArray  Array Массив слов или окончаний для чисел (1, 4, 5),
+ *         например array('яблоко', 'яблока', 'яблок')
+ * return String
+ */
+function getNumEnding($number, $endingArray)
+{
+    $number = $number % 100;
+    if ($number>=11 && $number<=19) {
+        $ending=$endingArray[2];
+    }
+    else {
+        $i = $number % 10;
+        switch ($i)
+        {
+            case (1): $ending = $endingArray[0]; break;
+            case (2):
+            case (3):
+            case (4): $ending = $endingArray[1]; break;
+            default: $ending=$endingArray[2];
+        }
+    }
+    return $ending;
+}
+// массив склонения слова "пост"
+var postsRus = ['Пост','Поста','Постов'];
+// массив склонения слова "тэг"
+var tagsRus = ['Тэг','Тэга','Тэгов'];
+%>
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <a href="<%= linkImg %>">
+                <img id="avatar" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" />
+            </a>
+            <h2 id="name"><%= profile.author %></h2>
+            <h3 id="title"><%= profile.author_title %></h3>
+            <span id="location"><i class="fa fa-map-marker"></i><%= profile.location %></span>
+            <a id="follow" target="_blank" href="<%= profile.follow %>"><%= __('profile.follow') %></a>
+        </div>
+        <div class="article-info profile-block">
+            <a href="<%= linkPost %>" class="article-info-block">
+                <%= postCount %>
+                <% if (config.language == 'ru') { %>
+                    <span><%= getNumEnding(postCount, postsRus) %></span>
+                <% } else { %>
+                    <span><%= (postCount > 1 ? __('profile.posts') : __('profile.post')) %></span>
+                <% } %>
+            </a>
+            <a href="<%= linkTags %>" class="article-info-block">
+                <%= tagCount %>
+                <% if (config.language == 'ru') { %>
+                    <span><%= getNumEnding(tagCount, tagsRus) %></span>
+                <% } else { %>
+                    <span><%= (tagCount > 1 ? __('profile.tags') : __('profile.tag')) %></span>
+                <% } %>
+                
+            </a>
+        </div>
+        <% if(theme.customize.social_links) { %>
+        <% var social = profile.social_links%>
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    <% var tooltipClass = theme.customize.social_link_tooltip === false ? '' : 'class=tooltip'; %>
+                    <% for(var i in social) { %>
+                    <td>
+                        <a href="<%- url_for(social[i]) %>" target="_blank" title="<%= i %>" <%= tooltipClass %>>
+                            <i class="fa fa-<%= i %>"></i>
+                        </a>
+                    </td>
+                    <% } %>
+                </tr>
+            </table>
+        </div>
+        <% } %>
+    </div>
+</aside>
