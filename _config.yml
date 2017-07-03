@@ -148,17 +148,7 @@ hfc_favicons:
     windows: true
     yandex: false
 
-uncss:
-  enable   : false
-  ignore   : "#added_at_runtime"
-  media    : ['(min-width: 700px) handheld and (orientation: landscape)']
-  priority : 10
-  timeout  : 3000
 
-criticalcss:
-  enable: true
-  critical:
-    minify: true
 
 sitemap:
     path: sitemap.xml
