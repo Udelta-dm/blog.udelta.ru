@@ -81,7 +81,9 @@ plugins:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:CeleRn/blog.udelta.ru.git
+  branch: deploy
 
 
 # Оптимизация
@@ -166,4 +168,3 @@ robotstxt:
   disallow:
   allow:
   sitemap: /sitemap.xml
-  
