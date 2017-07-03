@@ -69,3 +69,6 @@ typings/
 db.json
 public_html/
 .deploy*/
+
+
+tmp/
