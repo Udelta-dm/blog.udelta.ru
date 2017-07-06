@@ -1,7 +1,7 @@
 
 backend:
   name: github
-  repo: CeleRn/test.udelta.ru # Path to your Github repository
+  repo: Udelta-dm/blog.udelta.ru # Path to your Github repository
   branch: master # Branch to update (master by default)
 
 publish_mode: editorial_workflow
