@@ -1,0 +1,33 @@
+---
+layout: false
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.4/dist/cms.css" />
+  
+</head>
+<body>
+  <script src="https://unpkg.com/netlify-cms@~0.4/dist/cms.js"></script>
+  <script>
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var image = entry.getIn(['data', 'image']);
+        var bg = this.props.getMedia(image);
+        return h('div', {},
+          h('h1', {}, entry.getIn(['data', 'title'])),
+          h('img', {src: bg.toString()}),
+          h('div', {"className": "text"}, this.props.widgetFor('body'))
+        );
+      }
+    });
+    
+    CMS.registerPreviewTemplate("posts", PostPreview);
+  </script> 
+</body>
+</html>

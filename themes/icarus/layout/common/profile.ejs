@@ -11,13 +11,13 @@ if (page.author in site.data.authors) {
 // назначение адресов ссылок профиля
 
 
-var linkImg = config.url + '/' + config.archive_dir + '/';
-var linkPost = config.url + '/' + config.archive_dir + '/';
-var linkTags = config.url + '/' + config.tag_dir + '/';
+var linkImg =  '/' + config.archive_dir + '/';
+var linkPost =  '/' + config.archive_dir + '/';
+var linkTags =  '/' + config.tag_dir + '/';
 
 if (!defaultProfile) {
-    linkImg = config.url + config.authors_link + thisAuthor + '/';
-    linkPost = config.url + config.authors_link + thisAuthor + '/';
+    linkImg = config.authors_link + thisAuthor + '/';
+    linkPost = config.authors_link + thisAuthor + '/';
 }
  
 // фильтр по автору

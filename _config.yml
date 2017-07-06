@@ -1,4 +1,4 @@
-# Hexo Configuration
+# Hexo Configuration 
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
@@ -13,7 +13,7 @@ timezone: Europe/Moscow
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://blog.udelta.ru
-cdn: https://s-blog.udelta.ru
+cdn: https://blog.udelta.ru
 root: /
 permalink: :year/:month/:title/
 permalink_defaults:
@@ -22,7 +22,7 @@ authors_link: /authors/
 
 # Directory
 source_dir: source
-public_dir: public_html
+public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -37,7 +37,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -52,6 +52,18 @@ feed:
   limit: 20
   hub:
   content:
+
+# thumbnails:
+#   masks:
+#     - \.jpg$
+#     - \.jpeg$
+#     - \.gif$
+#     - \.png$
+#   profiles:
+#     thumb:
+#       resize:
+#         - 200
+#         - 200
 
 # Category & Tag
 default_category: uncategorized
@@ -81,74 +93,10 @@ plugins:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@github.com:Udelta-dm/blog.udelta.ru.git
-  branch: deploy
+
 
 
 # Оптимизация
-
-hfc_useref:
-  enable: true
-  concat: true
-  exclude:
-
-hfc_html:
-  enable: true
-  removeComments: true
-  removeCommentsFromCDATA: true
-  collapseWhitespace: true
-  collapseBooleanAttributes: true
-  removeEmptyAttributes: true
-  minifyJS: true
-  minifyCSS: true
-  exclude:
-
-hfc_css:
-  enable: true
-  exclude: 
-    - '*.min.css'
-
-hfc_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude: 
-    - '*.min.js'
-
-hfc_img:
-  enable: true
-  interlaced: false
-  multipass: false
-  optimizationLevel: 4
-  pngquant: true
-  progressive: false
-  webp: true
-  webpQuality: 75
-  gifslice: true
-  jpegtran: true
-  jpegrecompress: true
-  jpegrecompressQuality: 'medium'
-  optipng: true
-  svgo: true
-
-hfc_favicons:
-  enable: false
-  src: image/logo.png
-  target: img/
-  icons:
-    android: true
-    appleIcon: true
-    appleStartup: false
-    coast: false
-    favicons: true
-    firefox: false
-    opengraph: false
-    windows: true
-    yandex: false
-
-
 
 sitemap:
     path: sitemap.xml

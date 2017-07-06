@@ -1,14 +1,15 @@
 ---
 title: Мои мысли о SEO продвижении
-date: 2017-06-25 17:07:25
-author: yartsev
+author: celern
 categories:
-- SEO
+  - SEO
 tags:
-- SEO
+  - SEO
+date: 2017-06-25T17:07:25.000Z
+banner: /images/uploads/seo.jpg
+thumbnail: /images/uploads/thumb-seo.jpg
 toc: true
-banner: seo.jpg
-thumbnail: thumb-seo.jpg
+undefined: true
 ---
 
 Мой первый опыт написания статьи.
@@ -51,4 +52,5 @@ thumbnail: thumb-seo.jpg
 
 
  
+
 

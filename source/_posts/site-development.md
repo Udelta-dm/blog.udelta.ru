@@ -1,16 +1,16 @@
 ---
-title: Проектирование и разработка сайта поэтапно
-date: 2017-06-26 06:29:36
 author: celern
+date: 2017-06-26T06:29:36.000Z
+banner: /images/uploads/project.jpg
 categories:
-- Создание сайта
+  - Создание сайта
 tags:
-- проектирование сайта
-- разработка сайта
+  - проектирование сайта
+  - разработка сайта
+thumbnail: /images/uploads/thumb-project.jpg
+title: Проектирование и разработка сайта поэтапно
 toc: true
-banner: site-development.jpg
-thumbnail: thumb-site-development.jpg
-
+undefined: true
 ---
 
 За время, которым я занимаюсь разработкой сайтов, сложилось мое видение того, как должен проходить весь процесс создания сайта. 
@@ -37,7 +37,7 @@ thumbnail: thumb-site-development.jpg
 ***
 ## Выяснение потребностей
 
-{% asset_img qa.jpg Ответы на вопросы %}
+![Просто ответь на вопросы](/images/uploads/qa.jpg)
 
 
 На этом этапе **нужно ответить на ряд вопросов**, ответы на которые помогут при создания (переделки) сайта. 
@@ -135,3 +135,4 @@ thumbnail: thumb-site-development.jpg
 
 * Работы и контроль после запуска
 ***
+

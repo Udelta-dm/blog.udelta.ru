@@ -3,7 +3,7 @@
         <h1 class="author__title"><%= profile.author %> <small class="author__title-small">Автор блога</small></h1>
     <% } %>
     <% if (index) { %>
-        <a href="<%= config.url %><%= config.authors_link %><%= alias %>/">
+        <a href="<%= config.authors_link %><%= alias %>/">
             <img class="author__avatar" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" />
         </a>
     <% } else { %>

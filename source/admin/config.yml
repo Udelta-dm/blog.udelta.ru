@@ -1,0 +1,28 @@
+
+backend:
+  name: github
+  repo: CeleRn/test.udelta.ru # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+publish_mode: editorial_workflow
+
+media_folder: "source/images/uploads"
+public_folder: "/images/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "source/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template
+    fields: # The fields each document in this collection have
+      - {label: "Шаблон", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Заголовок", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Автор", name: "author", widget: "select", options: ["celern", "yartsev"]}
+      - {label: "Категории", name: "categories", widget: "list", required: false}
+      - {label: "Теги", name: "tags", widget: "list"}
+      - {label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma"}
+      - {label: "Главная картинка", name: "banner", widget: "image", required: false}
+      - {label: "Миниатюра", name: "thumbnail", widget: "string", required: false}
+      - {label: "Показывать содержание", name: "toc", widget: "boolean"}
+      - {label: "Текст статьи", name: "body", widget: "markdown"}

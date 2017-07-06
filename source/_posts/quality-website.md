@@ -1,13 +1,15 @@
 ---
 title: Каким должен быть качественный сайт?
-date: 2017-06-26 03:23:07
-author: yartsev
+author: celern
+categories:
+  - Создание сайта
 tags:
-- качество
-- SEO
+  - качество
+  - SEO
+date: 2017-06-26T03:23:07.000Z
+banner: /images/uploads/cool-site.jpg
+thumbnail: /images/uploads/thumb-cool-site.jpg
 toc: true
-banner: quality-website.jpg
-thumbnail: thumb-quality-website.jpg
 ---
 
 ## Качественный сайт

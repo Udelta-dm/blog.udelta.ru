@@ -1,16 +1,23 @@
 ---
-title: Описание целей сайта при проектировании
-date: 2017-06-27 04:12:48
+title: 'Зачем нужен сайт, его цели и их приоритет?'
 author: celern
+categories:
+  - Создание сайта
 tags:
-- проектирование сайта
-- разработка сайта
-- цели
+  - проектирование сайта
+  - разработка сайта
+  - цели
+date: 2017-06-27T04:12:48.000Z
+banner: /images/uploads/needs.jpg
+thumbnail: /images/uploads/thumb-needs.jpg
 toc: true
-banner: site-goal.jpg
-thumbnail: thumb-site-goal.jpg
+undefined: true
 ---
-Текст статьи
+Текст статьи 2
+
 
 ***
-{% post_link site-development Оглавление %}
+Статья из цикла: {% post_link site-development # Проектирование и разработка сайта поэтапно %}
+
+
+

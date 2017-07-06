@@ -67,8 +67,8 @@ typings/
 # Hexo
 
 db.json
-public_html/
+public/
 .deploy*/
-
+.users.yml
 
 tmp/
