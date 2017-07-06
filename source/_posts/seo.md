@@ -9,7 +9,6 @@ date: 2017-06-25T17:07:25.000Z
 banner: /images/uploads/seo.jpg
 thumbnail: /images/uploads/thumb-seo.jpg
 toc: true
-undefined: true
 ---
 
 Мой первый опыт написания статьи.
