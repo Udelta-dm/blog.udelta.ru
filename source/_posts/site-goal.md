@@ -12,7 +12,7 @@ banner: /images/uploads/needs.jpg
 thumbnail: /images/uploads/thumb-needs.jpg
 toc: true
 ---
-Статья из цикла: {% post_link site-development # Проектирование и разработка сайта поэтапно %}
+Статья из цикла: {% post_link site-development %}
 ***
 
 Первое что надо понять при проектировании сайта - это для чего вы его делаете.
