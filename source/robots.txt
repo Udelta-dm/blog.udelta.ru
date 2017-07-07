@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /admin/
+Disallow: /archives/
+Disallow: /tags/
+Disallow:
+
+Host: https://blog.udelta.ru
+Sitemap: https://blog.udelta.ru/sitemap.xml
